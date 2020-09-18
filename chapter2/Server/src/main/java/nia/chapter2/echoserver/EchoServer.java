@@ -22,16 +22,15 @@ public class EchoServer {
         this.port = port;
     }
 
-    public static void main(String[] args)
-        throws Exception {
-        if (args.length != 1) {
-            System.err.println("Usage: " + EchoServer.class.getSimpleName() +
-                " <port>"
-            );
-            return;
-        }
+    public static void main(String[] args) throws Exception {
+        // if (args.length != 1) {
+        //     System.err.println("Usage: " + EchoServer.class.getSimpleName() +
+        //             " <port>"
+        //     );
+        //     return;
+        // }
         //设置端口值（如果端口参数的格式不正确，则抛出一个NumberFormatException）
-        int port = Integer.parseInt(args[0]);
+        int port = Integer.parseInt("8090");
         //调用服务器的 start()方法
         new EchoServer(port).start();
     }
